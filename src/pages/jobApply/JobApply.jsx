@@ -1,10 +1,11 @@
 import { useNavigate, useParams } from "react-router";
-import UseAuth from "../../hooks/UseAuth";
 import Swal from "sweetalert2";
+import useAuth from "../../hooks/useAuth";
+
 
 const JobApply = () => {
   const { id } = useParams();
-  const { user } = UseAuth();
+  const { user } = useAuth();
   const navigate =useNavigate();
 
 
@@ -12,7 +13,7 @@ const JobApply = () => {
 
   const submitJobApplication = (e) => {
     e.preventDefault();
-    console.log(e);
+    // console.log(e);
 
     const form = e.target;
     const linkedIn = form.linkedIn.value;
@@ -28,7 +29,7 @@ const JobApply = () => {
       resume,
     };
 
-    fetch("http://localhost:4000/job-applications", {
+    fetch("http://localhost:4000/myApplications", {
       method: "POST",
       headers: {
         "content-type": "application/json",

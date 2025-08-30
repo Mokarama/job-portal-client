@@ -7,6 +7,8 @@ import JobDetails from "../pages/jobDetails/JobDetails";
 import PrivateRoute from "./PrivateRoute";
 import JobApply from "../pages/jobApply/JobApply";
 import MyApplication from "../pages/myApplication/MyApplication";
+import AddJobs from "../pages/addJobs/AddJobs";
+import MyPostedJob from "../pages/myPostedJob/MyPostedJob";
 
 
 let router = createBrowserRouter([
@@ -34,6 +36,14 @@ let router = createBrowserRouter([
           element:<PrivateRoute><MyApplication></MyApplication></PrivateRoute>
         },
 
+        {
+          path:'/addJob',
+          element:<PrivateRoute><AddJobs></AddJobs></PrivateRoute>
+        },
+        {
+          path:'/myPostedJobs',
+          element:<PrivateRoute><MyPostedJob></MyPostedJob></PrivateRoute>
+        },
         {
             path:'register',
             element:<Register></Register>

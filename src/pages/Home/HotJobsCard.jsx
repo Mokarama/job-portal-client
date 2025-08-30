@@ -39,7 +39,7 @@ const HotJobsCard = ({ job }) => {
 
          <div className="flex flex-wrap gap-4">
              {
-                requirements.map(requirement=><p className="border border-gray-300 p-2 rounded-xl ">{requirement}</p>)
+                requirements.map((requirement,index)=><p key={index} className="border border-gray-300 p-2 rounded-xl ">{requirement}</p>)
              }
             </div>
 
@@ -65,38 +65,3 @@ const HotJobsCard = ({ job }) => {
 
 export default HotJobsCard;
 
-/*
-
-_id
-68a092f24418197e5c1a7826
-title
-"Marketing Specialist"
-location
-"Banani, Dhaka"
-jobType
-"Remote"
-category
-"Marketing"
-applicationDeadline
-"2024-12-15"
-
-salaryRange
-Object
-description
-"Join our marketing team to strategize and implement innovative campaig…"
-company
-"GoatMark Inc"
-
-requirements
-Array (4)
-
-responsibilities
-Array (3)
-status
-"active"
-hr_email
-"recruitment@brightmark.com"
-hr_name
-"Tasnia Ahmed"
-company_logo
-"https://i.ibb.co/TvvzXfq/google.png"*/
